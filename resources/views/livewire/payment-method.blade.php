@@ -55,15 +55,31 @@
                         <li class="py-2 flex justify-between">
                             <div>
                                 <p><span class="font-semibold">{{ $paymentMethod->billing_details->name }}</span>
-                                    xxxx-{{ $paymentMethod->card->last4 }}</p>
+                                    xxxx-{{ $paymentMethod->card->last4 }}
+                                    @if ($this->defaultPaymentMethod->id == $paymentMethod->id)
+                                        <span
+                                            class="ml-2 bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Predeterminado</span>
+                                    @endif
+                                </p>
                                 <p>Expira: {{ $paymentMethod->card->exp_month }}/{{ $paymentMethod->card->exp_year }}
                                 </p>
                                 <p>Marca: {{ $paymentMethod->card->brand }}</p>
                             </div>
-                            <button class="disabled:opacity-25"
-                                wire:click="deletePaymentMethod('{{ $paymentMethod->id }}')"
-                                wire:target="deletePaymentMethod('{{ $paymentMethod->id }}')"
-                                wire:loading.attr="disabled"><i class="fa-regular fa-trash-can"></i></button>
+
+                            @if ($this->defaultPaymentMethod->id != $paymentMethod->id)
+                                <div class="flex space-x-4">
+                                    <button class="disabled:opacity-25"
+                                        wire:click="defaultPaymentMethod('{{ $paymentMethod->id }}')"
+                                        wire:target="defaultPaymentMethod('{{ $paymentMethod->id }}')"
+                                        wire:loading.attr="disabled"><i class="fa-regular fa-star"></i></button>
+                                    <button class="disabled:opacity-25"
+                                        wire:click="deletePaymentMethod('{{ $paymentMethod->id }}')"
+                                        wire:target="deletePaymentMethod('{{ $paymentMethod->id }}')"
+                                        wire:loading.attr="disabled"><i class="fa-regular fa-trash-can"></i></button>
+                                </div>
+                            @endif
+
+
                         </li>
                     @endforeach
                 </ul>
