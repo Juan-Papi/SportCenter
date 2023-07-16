@@ -2,14 +2,19 @@
 
 namespace App\Models;
 
+use function Illuminate\Events\queueable;
+
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles; //extra
+use Laravel\Cashier\Billable;//ext2
+
 class User extends Authenticatable
 {
     use HasApiTokens;
@@ -18,6 +23,7 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
     use HasRoles; //extra
+    use Billable;//ext2
 
     /**
      * The attributes that are mass assignable.
@@ -74,4 +80,13 @@ class User extends Authenticatable
     public function bitacoras(){
         return $this->hasMany(Bitacora::class);
     }
+    
+    protected static function booted(): void
+{
+    static::updated(queueable(function (User $customer) {
+        if ($customer->hasStripeId()) {
+            $customer->syncStripeCustomerDetails();
+        }
+    }));
+}
 }

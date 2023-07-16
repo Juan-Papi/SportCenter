@@ -10,8 +10,15 @@
                     </a>
                 </div>
 
+
                 <!-- Navigation Links -->
 
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
+                        Home
+                    </x-nav-link>
+                </div>
                 @can('Ver dashboard')
                     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                         <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
@@ -19,6 +26,12 @@
                         </x-nav-link>
                     </div>
                 @endcan
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link href="{{ route('membresia.index') }}" :active="request()->routeIs('membresia.index')">
+                        Membresias
+                    </x-nav-link>
+                </div>
 
             </div>
 
@@ -115,6 +128,10 @@
                                     {{ __('Profile') }}
                                 </x-dropdown-link>
 
+                                <x-dropdown-link href="{{ route('profile.show') }}">
+                                    Métodos de pago
+                                </x-dropdown-link>
+
                                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                                     <x-dropdown-link href="{{ route('api-tokens.index') }}">
                                         {{ __('API Tokens') }}
@@ -161,6 +178,12 @@
 
     <!-- Responsive Navigation Menu -->
     <div :class="{ 'block': open, 'hidden': !open }" class="hidden sm:hidden">
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
+                Home
+            </x-responsive-nav-link>
+        </div>
+
         @can('Ver dashboard')
             <div class="pt-2 pb-3 space-y-1">
                 <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
@@ -168,6 +191,12 @@
                 </x-responsive-nav-link>
             </div>
         @endcan
+
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('membresia.index') }}" :active="request()->routeIs('membresia.index')">
+                Membresias
+            </x-responsive-nav-link>
+        </div>
 
         <!-- Responsive Settings Options -->
         @auth
@@ -191,6 +220,10 @@
                     <!-- Account Management -->
                     <x-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
                         {{ __('Profile') }}
+                    </x-responsive-nav-link>
+
+                    <x-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
+                        Métodos de pago
                     </x-responsive-nav-link>
 
                     @if (Laravel\Jetstream\Jetstream::hasApiFeatures())

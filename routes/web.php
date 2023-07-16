@@ -19,7 +19,7 @@ use App\Http\Controllers\TelefonoController;
 use App\Http\Controllers\NotaVentaController;
 use App\Http\Controllers\PersonalController;
 use App\Http\Controllers\BitacoraController;
-
+use App\Http\Livewire\ShowMembresias;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,7 +33,7 @@ use App\Http\Controllers\BitacoraController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::middleware([
     'auth:sanctum',
@@ -196,3 +196,6 @@ Route::delete('personal/{personal}', [PersonalController::class, 'destroy'])->na
 
 //PARA LA BITACORA 
 Route::get('bitacora', [BitacoraController::class, 'index'])->name('bitacora.index');
+
+//PARA LA MEMBRESIA
+Route::get('membresia', ShowMembresias::class)->name('membresia.index');
