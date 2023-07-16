@@ -11,12 +11,16 @@ class PaymentMethod extends Component
     {
         auth()->user()->addPaymentMethod($paymentMethod);
     }
-
+    public function deletePaymentMethod($paymentMethod)
+    {
+       // dd($paymentMethod);//Para verificar si se esta enviando la informacion
+       auth()->user()->deletePaymentMethod($paymentMethod);
+    }
     public function render()
     {
         return view('livewire.payment-method', [
             'intent' => auth()->user()->createSetupIntent(),
             'paymentMethods' => auth()->user()->paymentMethods(),
-    ]);
+        ]);
     }
-}   
+}
