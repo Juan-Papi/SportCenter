@@ -19,13 +19,6 @@
                         Home
                     </x-nav-link>
                 </div>
-                @can('Ver dashboard')
-                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                            {{ __('Dashboard') }}
-                        </x-nav-link>
-                    </div>
-                @endcan
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link href="{{ route('membresia.index') }}" :active="request()->routeIs('membresia.index')">
@@ -128,6 +121,12 @@
                                     {{ __('Profile') }}
                                 </x-dropdown-link>
 
+                                @can('Ver dashboard')
+                                    <x-dropdown-link href="{{ route('dashboard') }}">
+                                        Dashboard
+                                    </x-dropdown-link>
+                                @endcan
+
                                 <x-dropdown-link href="{{ route('billings.index') }}">
                                     Métodos de pago
                                 </x-dropdown-link>
@@ -184,14 +183,6 @@
             </x-responsive-nav-link>
         </div>
 
-        @can('Ver dashboard')
-            <div class="pt-2 pb-3 space-y-1">
-                <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                    {{ __('Dashboard') }}
-                </x-responsive-nav-link>
-            </div>
-        @endcan
-
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link href="{{ route('membresia.index') }}" :active="request()->routeIs('membresia.index')">
                 Membresias
@@ -221,6 +212,12 @@
                     <x-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
                         {{ __('Profile') }}
                     </x-responsive-nav-link>
+
+                    @can('Ver dashboard')
+                        <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                            Dashboard
+                        </x-responsive-nav-link>
+                    @endcan
 
                     <x-responsive-nav-link href="{{ route('billings.index') }}" :active="request()->routeIs('billings.index')">
                         Métodos de pago
