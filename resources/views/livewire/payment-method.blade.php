@@ -52,7 +52,7 @@
                 <ul class="divide-y divide-gray-700 text-gray-50">
                     {{-- Buscar en google api Stripe para ver que campos tiene el object metodo de pago paymentMethod --}}
                     @foreach ($paymentMethods as $paymentMethod)
-                        <li class="py-2 flex justify-between">
+                        <li class="py-2 flex justify-between" wire:key="{{$paymentMethod->id}}">
                             <div>
                                 <p><span class="font-semibold">{{ $paymentMethod->billing_details->name }}</span>
                                     xxxx-{{ $paymentMethod->card->last4 }}
