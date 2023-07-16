@@ -20,6 +20,7 @@ use App\Http\Controllers\NotaVentaController;
 use App\Http\Controllers\PersonalController;
 use App\Http\Controllers\BitacoraController;
 use App\Http\Livewire\ShowMembresias;
+use App\Http\Controllers\BillingController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -199,3 +200,6 @@ Route::get('bitacora', [BitacoraController::class, 'index'])->name('bitacora.ind
 
 //PARA LA MEMBRESIA
 Route::get('membresia', ShowMembresias::class)->name('membresia.index');
+
+//Metodo de pago
+Route::get('/billings', [BillingController::class, 'index'])->middleware('auth')->name('billings.index');

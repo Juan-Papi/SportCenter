@@ -128,7 +128,7 @@
                                     {{ __('Profile') }}
                                 </x-dropdown-link>
 
-                                <x-dropdown-link href="{{ route('profile.show') }}">
+                                <x-dropdown-link href="{{ route('billings.index') }}">
                                     Métodos de pago
                                 </x-dropdown-link>
 
@@ -222,7 +222,7 @@
                         {{ __('Profile') }}
                     </x-responsive-nav-link>
 
-                    <x-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
+                    <x-responsive-nav-link href="{{ route('billings.index') }}" :active="request()->routeIs('billings.index')">
                         Métodos de pago
                     </x-responsive-nav-link>
 
