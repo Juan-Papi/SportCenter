@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use PhpParser\Node\Stmt\TryCatch;
 
 class Subscription extends Component
 {
@@ -20,7 +21,17 @@ class Subscription extends Component
             $this->emit('error', '¡No tienes un método de pago por defecto!');
             return;
         }
-        auth()->user()->newSubscription('Membresia Sport', $plan)->create($this->defaultPaymentMethod->id);
+        //Capturar error
+         try {
+            //code...
+            auth()->user()->newSubscription('Membresia Sport', $plan)->create($this->defaultPaymentMethod->id);
+
+         } catch (\Exception $e) {
+
+            // $this->emit('error', $e->getMessage());//asi se queda cuando esta en ingles por defecto
+             $this->emit('error', __($e->getMessage()));//laravel toma ahora el valor del msj como una llave y busca el valor equivalente en el json que esta en la carpeta lang
+
+         }
     }
     public function render()
     {

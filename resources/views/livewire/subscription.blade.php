@@ -349,8 +349,8 @@
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
-                    text: '¡No tiene un método de pago registrado!',
-                    footer: '<a href="{{ route('billings.index') }}">Agregar método de pago</a>'
+                    text: message,
+                    //footer: '<a href="{{ route('billings.index') }}">Agregar método de pago</a>'
                 })
             })
         </script>

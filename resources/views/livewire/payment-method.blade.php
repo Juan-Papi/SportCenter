@@ -140,6 +140,9 @@
                     //Limpiar formulario
                     cardHolderName.value = '';
                     cardElement.clear();
+
+                    let span = document.getElementById('card-error-message');
+                    span.textContent = '';
                     @this.addPaymentMethod(setupIntent.payment_method);
                 }
             });
