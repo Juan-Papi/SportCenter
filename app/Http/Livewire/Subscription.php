@@ -22,16 +22,30 @@ class Subscription extends Component
             return;
         }
         //Capturar error
-         try {
-            //code...
+        try {
+            if (auth()->user()->subscribed('Membresia Sport')) {
+                auth()->user()->subscription('Membresia Sport')->swap($plan);
+                return;
+            }
             auth()->user()->newSubscription('Membresia Sport', $plan)->create($this->defaultPaymentMethod->id);
+            auth()->user()->refresh();//para que se renderice bien la vista y se muestre la info correctamente
 
-         } catch (\Exception $e) {
+        } catch (\Exception $e) {
 
             // $this->emit('error', $e->getMessage());//asi se queda cuando esta en ingles por defecto
-             $this->emit('error', __($e->getMessage()));//laravel toma ahora el valor del msj como una llave y busca el valor equivalente en el json que esta en la carpeta lang
+            $this->emit('error', __($e->getMessage())); //laravel toma ahora el valor del msj como una llave y busca el valor equivalente en el json que esta en la carpeta lang
 
-         }
+        }
+    }
+
+    public function cancelSubscription()
+    {
+        auth()->user()->subscription('Membresia Sport')->cancel();
+    }
+
+    public function resumeSubscription()
+    {//Para reanudar la suscripcion
+        auth()->user()->subscription('Membresia Sport')->resume();
     }
     public function render()
     {
