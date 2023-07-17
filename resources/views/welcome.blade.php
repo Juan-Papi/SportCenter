@@ -16,14 +16,6 @@
 
         </div>
     </section>
-   
-    {{-- nueva section --}}
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-200 py-10">
-        {{-- <div class="grid grid-cols-3 gap-6">
-            hola mundo
-        </div> --}}
-        @livewire('subscription')
-    </section>
 
     <section class="mt-24">
         <h1 class="text-gray-500 text-center text-3xl mb-6">
@@ -90,4 +82,14 @@
             </article>
         </div>
     </section>
+
+    {{-- nueva section --}}
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-200 py-10">
+        {{-- <div class="grid grid-cols-3 gap-6">
+            hola mundo
+        </div> --}}
+        @livewire('subscription')
+    </section>
+
+
 </x-app-layout>

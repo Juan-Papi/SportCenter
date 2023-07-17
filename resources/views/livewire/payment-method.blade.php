@@ -25,6 +25,7 @@
         </footer>
     </section>
 
+    {{-- Detalle de los metodos de pago agregados --}}
     <div class="mb-12 justify-center" wire:target="addPaymentMethod" wire:loading.flex>
 
         <div role="status">
@@ -52,7 +53,7 @@
                 <ul class="divide-y divide-gray-700 text-gray-50">
                     {{-- Buscar en google api Stripe para ver que campos tiene el object metodo de pago paymentMethod --}}
                     @foreach ($paymentMethods as $paymentMethod)
-                        <li class="py-2 flex justify-between" wire:key="{{$paymentMethod->id}}">
+                        <li class="py-2 flex justify-between" wire:key="{{ $paymentMethod->id }}">
                             <div>
                                 <p><span class="font-semibold">{{ $paymentMethod->billing_details->name }}</span>
                                     xxxx-{{ $paymentMethod->card->last4 }}
