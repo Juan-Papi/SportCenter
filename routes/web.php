@@ -21,6 +21,7 @@ use App\Http\Controllers\PersonalController;
 use App\Http\Controllers\BitacoraController;
 use App\Http\Livewire\ShowMembresias;
 use App\Http\Controllers\BillingController;
+use Illuminate\Http\Request;//para invoice
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -195,7 +196,7 @@ Route::get('personal/{personal}/edit', [PersonalController::class, 'edit'])->nam
 Route::put('personal/{personal}', [PersonalController::class, 'update'])->name('personal.update');
 Route::delete('personal/{personal}', [PersonalController::class, 'destroy'])->name('personal.destroy');
 
-//PARA LA BITACORA 
+//PARA LA BITACORA
 Route::get('bitacora', [BitacoraController::class, 'index'])->name('bitacora.index');
 
 //PARA LA MEMBRESIA
@@ -203,3 +204,8 @@ Route::get('membresia', ShowMembresias::class)->name('membresia.index');
 
 //Metodo de pago
 Route::get('/billings', [BillingController::class, 'index'])->middleware('auth')->name('billings.index');
+
+//Invoice
+Route::get('/user/invoice/{invoice}', function (Request $request, string $invoiceId) {
+    return $request->user()->downloadInvoice($invoiceId);
+});
