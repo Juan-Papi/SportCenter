@@ -21,8 +21,8 @@
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link href="{{ route('membresia.index') }}" :active="request()->routeIs('membresia.index')">
-                        Membresias
+                    <x-nav-link href="{{ route('billings.index') }}" :active="request()->routeIs('billings.index')">
+                        Métodos de pago
                     </x-nav-link>
                 </div>
 
@@ -184,8 +184,8 @@
         </div>
 
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link href="{{ route('membresia.index') }}" :active="request()->routeIs('membresia.index')">
-                Membresias
+            <x-responsive-nav-link href="{{ route('billings.index') }}" :active="request()->routeIs('billings.index')">
+                Métodos de pago
             </x-responsive-nav-link>
         </div>
 
