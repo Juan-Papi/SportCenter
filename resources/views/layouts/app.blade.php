@@ -16,6 +16,8 @@
     <script src="https://kit.fontawesome.com/8adc7a3e69.js" crossorigin="anonymous"></script>
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    {{-- sweetalert2 --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Styles -->
     @livewireStyles

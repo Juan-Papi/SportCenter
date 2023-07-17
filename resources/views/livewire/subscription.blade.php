@@ -78,13 +78,13 @@
                         @if (auth()->user()->subscribedToPrice('price_1NUcHCDwifqCcTXtK0tyicxS', 'Membresia Sport'))
                             Suscrito
                         @else
-                          {{-- <button
+                            {{-- <button
                                 class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-blue-900"
                                 wire:click="newSubscription('price_1NUcHCDwifqCcTXtK0tyicxS')"
                                 wire.target="newSubscription('price_1NUcHCDwifqCcTXtK0tyicxS')"
-                                wire:loading.attr="disabled">--}}
-                                {{-- SPINNER --}}
-                                {{-- <div class="justify-center" wire.target="newSubscription('price_1NUcHCDwifqCcTXtK0tyicxS')"
+                                wire:loading.attr="disabled"> --}}
+                            {{-- SPINNER --}}
+                            {{-- <div class="justify-center" wire.target="newSubscription('price_1NUcHCDwifqCcTXtK0tyicxS')"
                             wire:loading>
 
                             <div role="status">
@@ -102,13 +102,13 @@
                             </div>
 
                         </div> --}}
-                              {{--  <x-spinner size="4" wire.target="newSubscription('price_1NUcHCDwifqCcTXtK0tyicxS')"
+                            {{--  <x-spinner size="4" wire.target="newSubscription('price_1NUcHCDwifqCcTXtK0tyicxS')"
                                     wire:loading />
                                 Get started
-                            </button>--}}
-                            <x-button   wire:click="newSubscription('price_1NUcHCDwifqCcTXtK0tyicxS')"
-                            wire:target="newSubscription('price_1NUcHCDwifqCcTXtK0tyicxS')"
-                            wire:loading.attr="disabled">
+                            </button> --}}
+                            <x-button wire:click="newSubscription('price_1NUcHCDwifqCcTXtK0tyicxS')"
+                                wire:target="newSubscription('price_1NUcHCDwifqCcTXtK0tyicxS')"
+                                wire:loading.attr="disabled">
                                 <x-spinner size="4" wire:target="newSubscription('price_1NUcHCDwifqCcTXtK0tyicxS')"
                                     wire:loading />
                                 Get started
@@ -215,9 +215,9 @@
                                     wire:loading />
                                 Get started
                             </button> --}}
-                            <x-button   wire:click="newSubscription('price_1NUcHCDwifqCcTXtb91zhGoQ')"
-                            wire:target="newSubscription('price_1NUcHCDwifqCcTXtb91zhGoQ')"
-                            wire:loading.attr="disabled">
+                            <x-button wire:click="newSubscription('price_1NUcHCDwifqCcTXtb91zhGoQ')"
+                                wire:target="newSubscription('price_1NUcHCDwifqCcTXtb91zhGoQ')"
+                                wire:loading.attr="disabled">
                                 <x-spinner size="4" wire:target="newSubscription('price_1NUcHCDwifqCcTXtb91zhGoQ')"
                                     wire:loading />
                                 Get started
@@ -341,4 +341,19 @@
             </div>
         </div>
     </section>
+
+    @push('js')
+        <script>
+            //pedimos que escuche el evento error
+            Livewire.on('error', function(message) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: '¡No tiene un método de pago registrado!',
+                    footer: '<a href="{{ route('billings.index') }}">Agregar método de pago</a>'
+                })
+            })
+        </script>
+    @endpush
+
 </div>
