@@ -22,6 +22,11 @@
 
                 @auth
                     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link href="{{ route('reservar.index') }}" :active="request()->routeIs('reservar.index')">
+                            Reservar áreas
+                        </x-nav-link>
+                    </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                         <x-nav-link href="{{ route('billings.index') }}" :active="request()->routeIs('billings.index')">
                             Métodos de pago
                         </x-nav-link>
@@ -186,11 +191,19 @@
             </x-responsive-nav-link>
         </div>
 
-        <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link href="{{ route('billings.index') }}" :active="request()->routeIs('billings.index')">
-                Métodos de pago
-            </x-responsive-nav-link>
-        </div>
+        @auth
+            <div class="pt-2 pb-3 space-y-1">
+                <x-responsive-nav-link href="{{ route('reservar.index') }}" :active="request()->routeIs('reservar.index')">
+                    Reservar áreas
+                </x-responsive-nav-link>
+            </div>
+            <div class="pt-2 pb-3 space-y-1">
+                <x-responsive-nav-link href="{{ route('billings.index') }}" :active="request()->routeIs('billings.index')">
+                    Métodos de pago
+                </x-responsive-nav-link>
+            </div>
+        @endauth
+
 
         <!-- Responsive Settings Options -->
         @auth

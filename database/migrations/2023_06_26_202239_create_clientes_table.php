@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('paterno');
             $table->string('ciudad');
             $table->string('sexo');
+            $table->string('telefono')->nullable();
             $table->timestamps();
         });
     }

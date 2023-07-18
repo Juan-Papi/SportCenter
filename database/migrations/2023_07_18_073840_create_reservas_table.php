@@ -16,7 +16,7 @@ return new class extends Migration
             $table->date('fecha_reserva');
             $table->time('hora_inicio');
             $table->time('hora_fin');
-
+            $table->string('estado')->default('SOLICITADO');
 
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('cliente_id');

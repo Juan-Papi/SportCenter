@@ -22,6 +22,7 @@ use App\Http\Controllers\BitacoraController;
 use App\Http\Livewire\ShowMembresias;
 use App\Http\Controllers\BillingController;
 use Illuminate\Http\Request;//para invoice
+use App\Http\Controllers\ReservaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -209,3 +210,6 @@ Route::get('/billings', [BillingController::class, 'index'])->middleware('auth')
 Route::get('/user/invoice/{invoice}', function (Request $request, string $invoiceId) {
     return $request->user()->downloadInvoice($invoiceId);
 });
+
+//Reservar areas
+Route::get('/reservar', [ReservaController::class, 'index'])->middleware('auth')->name('reservar.index');
