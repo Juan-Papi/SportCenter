@@ -12,7 +12,7 @@
                 placeholder="Escriba un nombre ..." type="text">
         </div> --}}
         <div class="card-header">
-            <a class="btn btn-secondary" href="{{ route('admin.parabrisa.create') }}">NUEVO PARABRISA</a>
+            <a class="btn btn-secondary" href="{{ route('admin.parabrisa.create') }}">NUEVO PRODUCTO</a>
         </div>
 
         @if ($parabrisas->count())
@@ -20,15 +20,15 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>ID</th>                       
+                            <th>ID</th>
                             {{-- en descripcion ira vehiculo con marca --}}
                             <th>Descripcion</th>
-                     
+
                             <th>Abajo</th>
                             <th>Arriba</th>
                             <th>Costado</th>
                             <th>Medio</th>
-                            
+
                             <th>OBS</th>
                             <th colspan="2"></th>
                         </tr>
@@ -39,13 +39,13 @@
 
                                 <td>
                                     {{ $parabrisa->id }}
-                                </td>                            
+                                </td>
                                 <td>
                                     {{ $parabrisa->vehiculo->descripcion }} //
                                     Año: {{ $parabrisa->vehiculo->año}} //
                                     Marca: {{ $parabrisa->vehiculo->marca->nombre}}
                                 </td>
-                              
+
                                 <td>
                                     {{ $parabrisa->abajo }}
                                 </td>
@@ -62,7 +62,7 @@
                                     {{ $parabrisa->observacion }}
                                 </td>
                                 {{-- para que el boton quede pegado a la derecha->width=10px --}}
-                             
+
                                 <td width="10px">
                                     <a class="btn btn-primary"
                                         href="{{ route('admin.parabrisa.edit', $parabrisa) }}">Editar</a>

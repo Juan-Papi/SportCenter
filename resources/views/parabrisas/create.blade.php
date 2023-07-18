@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Nuevo PARABRISA</h1>
+    <h1>Nuevo PRODUCTO</h1>
 @stop
 
 @section('content')
@@ -132,7 +132,7 @@
             </div>
         </div>
 
-        {!! Form::submit('Crear PARABRISA', ['class' => 'btn btn-primary mt-2']) !!}
+        {!! Form::submit('Crear PRODUCTO', ['class' => 'btn btn-primary mt-2']) !!}
 
         {!! Form::close() !!}
     </div>

@@ -20,11 +20,14 @@
                     </x-nav-link>
                 </div>
 
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link href="{{ route('billings.index') }}" :active="request()->routeIs('billings.index')">
-                        Métodos de pago
-                    </x-nav-link>
-                </div>
+                @auth
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link href="{{ route('billings.index') }}" :active="request()->routeIs('billings.index')">
+                            Métodos de pago
+                        </x-nav-link>
+                    </div>
+                @endauth
+
 
             </div>
 
@@ -219,9 +222,12 @@
                         </x-responsive-nav-link>
                     @endcan
 
-                    <x-responsive-nav-link href="{{ route('billings.index') }}" :active="request()->routeIs('billings.index')">
-                        Métodos de pago
-                    </x-responsive-nav-link>
+                    @auth
+                        <x-responsive-nav-link href="{{ route('billings.index') }}" :active="request()->routeIs('billings.index')">
+                            Métodos de pago
+                        </x-responsive-nav-link>
+                    @endauth
+
 
                     @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                         <x-responsive-nav-link href="{{ route('api-tokens.index') }}" :active="request()->routeIs('api-tokens.index')">

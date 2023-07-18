@@ -19,7 +19,7 @@
 
     <section class="mt-24">
         <h1 class="text-gray-500 text-center text-3xl mb-6">
-            CONTENT
+            Nuestros equipos
         </h1>
 
         <div
@@ -81,7 +81,196 @@
                 </header>
             </article>
         </div>
+
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8">
+            <article>
+                <figure>
+                    <img class="rounded-xl h-36 w-full object-cover"
+                        src="{{ asset('img/home/content/car-gaa7ebd4e1_640.jpg') }}" alt="">
+                </figure>
+                <header class="mt-2">
+
+                    <h1 class="text-center text-xl text-gray-400">
+                        Lorem, ipsum.
+                    </h1>
+                    <p class="text-sm text-gray-300">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Dignissimos, aspernatur?</p>
+                </header>
+            </article>
+            <article>
+                <figure>
+                    <img class="rounded-xl h-36 w-full object-cover"
+                        src="{{ asset('img/home/content/audi-a3-gb143c57e8_640.jpg') }}" alt="">
+                </figure>
+                <header class="mt-2">
+
+                    <h1 class="text-center text-xl text-gray-400">
+                        Lorem, ipsum.
+                    </h1>
+                    <p class="text-sm text-gray-300">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Dignissimos, aspernatur?</p>
+                </header>
+            </article>
+            <article>
+                <figure>
+                    <img class="rounded-xl h-36 w-full object-cover"
+                        src="{{ asset('img/home/content/automobile-gf9c29d6a1_640.jpg') }}" alt="">
+                </figure>
+                <header class="mt-2">
+
+                    <h1 class="text-center text-xl text-gray-400">
+                        Lorem, ipsum.
+                    </h1>
+                    <p class="text-sm text-gray-300">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Dignissimos, aspernatur?</p>
+                </header>
+            </article>
+            <article>
+                <figure>
+                    <img class="rounded-xl h-36 w-full object-cover"
+                        src="{{ asset('img/home/content/chevy-impala-ga2c01d4f5_640.jpg') }}" alt="">
+                </figure>
+                <header class="mt-2">
+
+                    <h1 class="text-center text-xl text-gray-400">
+                        Lorem, ipsum.
+                    </h1>
+                    <p class="text-sm text-gray-300">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Dignissimos, aspernatur?</p>
+                </header>
+            </article>
+        </div>
+
     </section>
+
+    <section class="mt-24">
+        <h1 class="text-gray-500 text-center text-3xl mb-6">
+            Áreas deportivas
+        </h1>
+
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8">
+            <article>
+                <figure>
+                    <img class="rounded-xl h-36 w-full object-cover"
+                        src="{{ asset('img/home/content/car-gaa7ebd4e1_640.jpg') }}" alt="">
+                </figure>
+                <header class="mt-2">
+
+                    <h1 class="text-center text-xl text-gray-400">
+                        Lorem, ipsum.
+                    </h1>
+                    <p class="text-sm text-gray-300">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Dignissimos, aspernatur?</p>
+                </header>
+            </article>
+            <article>
+                <figure>
+                    <img class="rounded-xl h-36 w-full object-cover"
+                        src="{{ asset('img/home/content/audi-a3-gb143c57e8_640.jpg') }}" alt="">
+                </figure>
+                <header class="mt-2">
+
+                    <h1 class="text-center text-xl text-gray-400">
+                        Lorem, ipsum.
+                    </h1>
+                    <p class="text-sm text-gray-300">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Dignissimos, aspernatur?</p>
+                </header>
+            </article>
+            <article>
+                <figure>
+                    <img class="rounded-xl h-36 w-full object-cover"
+                        src="{{ asset('img/home/content/automobile-gf9c29d6a1_640.jpg') }}" alt="">
+                </figure>
+                <header class="mt-2">
+
+                    <h1 class="text-center text-xl text-gray-400">
+                        Lorem, ipsum.
+                    </h1>
+                    <p class="text-sm text-gray-300">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Dignissimos, aspernatur?</p>
+                </header>
+            </article>
+            <article>
+                <figure>
+                    <img class="rounded-xl h-36 w-full object-cover"
+                        src="{{ asset('img/home/content/chevy-impala-ga2c01d4f5_640.jpg') }}" alt="">
+                </figure>
+                <header class="mt-2">
+
+                    <h1 class="text-center text-xl text-gray-400">
+                        Lorem, ipsum.
+                    </h1>
+                    <p class="text-sm text-gray-300">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Dignissimos, aspernatur?</p>
+                </header>
+            </article>
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8">
+            <article>
+                <figure>
+                    <img class="rounded-xl h-36 w-full object-cover"
+                        src="{{ asset('img/home/content/car-gaa7ebd4e1_640.jpg') }}" alt="">
+                </figure>
+                <header class="mt-2">
+
+                    <h1 class="text-center text-xl text-gray-400">
+                        Lorem, ipsum.
+                    </h1>
+                    <p class="text-sm text-gray-300">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Dignissimos, aspernatur?</p>
+                </header>
+            </article>
+            <article>
+                <figure>
+                    <img class="rounded-xl h-36 w-full object-cover"
+                        src="{{ asset('img/home/content/audi-a3-gb143c57e8_640.jpg') }}" alt="">
+                </figure>
+                <header class="mt-2">
+
+                    <h1 class="text-center text-xl text-gray-400">
+                        Lorem, ipsum.
+                    </h1>
+                    <p class="text-sm text-gray-300">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Dignissimos, aspernatur?</p>
+                </header>
+            </article>
+            <article>
+                <figure>
+                    <img class="rounded-xl h-36 w-full object-cover"
+                        src="{{ asset('img/home/content/automobile-gf9c29d6a1_640.jpg') }}" alt="">
+                </figure>
+                <header class="mt-2">
+
+                    <h1 class="text-center text-xl text-gray-400">
+                        Lorem, ipsum.
+                    </h1>
+                    <p class="text-sm text-gray-300">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Dignissimos, aspernatur?</p>
+                </header>
+            </article>
+            <article>
+                <figure>
+                    <img class="rounded-xl h-36 w-full object-cover"
+                        src="{{ asset('img/home/content/chevy-impala-ga2c01d4f5_640.jpg') }}" alt="">
+                </figure>
+                <header class="mt-2">
+
+                    <h1 class="text-center text-xl text-gray-400">
+                        Lorem, ipsum.
+                    </h1>
+                    <p class="text-sm text-gray-300">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Dignissimos, aspernatur?</p>
+                </header>
+            </article>
+        </div>
+
+    </section>
+
 
     {{-- nueva section --}}
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-200 py-10">

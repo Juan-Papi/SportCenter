@@ -373,12 +373,12 @@ return [
             ],
         ],
         [
-            'text'    => 'Administrar ventas',
+            'text'    => 'Administrar salidas',
             'icon'    => 'fas fa-fw fa-chart-line',
             'can' => 'Administrar ventas',
             'submenu' => [
                 [
-                    'text' => 'Nota de venta',
+                    'text' => 'Nota de salida',
                     'icon'    => 'fas fa-fw fa-receipt',
                     'route'  => 'nota_venta.index',
                     'active' => ['nota_venta*'], //extra para los botones sidevar relacionados
@@ -450,7 +450,7 @@ return [
             'can' => 'Administrar inventario',
             'submenu' => [
                 [
-                    'text' => 'Parabrisa',
+                    'text' => 'Produto',
                     'route'  => 'admin.parabrisa.index',
                     'icon'    => 'fas fa-fw fa-glass-whiskey',
                     'active' => ['parabrisa*'], //extra para los botones sidevar relacionados
