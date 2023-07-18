@@ -13,7 +13,7 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles; //extra
-use Laravel\Cashier\Billable;//ext2
+use Laravel\Cashier\Billable; //ext2
 
 class User extends Authenticatable
 {
@@ -23,7 +23,7 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
     use HasRoles; //extra
-    use Billable;//ext2
+    use Billable; //ext2
 
     /**
      * The attributes that are mass assignable.
@@ -77,16 +77,22 @@ class User extends Authenticatable
         return $this->hasOne(Personal::class);
     }
     //relacion de uno a muchos
-    public function bitacoras(){
+    public function bitacoras()
+    {
         return $this->hasMany(Bitacora::class);
     }
-    
+    //relacion de uno a muchos
+    public function reservas()
+    {
+        return $this->hasMany(Reserva::class);
+    }
+
     protected static function booted(): void
-{
-    static::updated(queueable(function (User $customer) {
-        if ($customer->hasStripeId()) {
-            $customer->syncStripeCustomerDetails();
-        }
-    }));
-}
+    {
+        static::updated(queueable(function (User $customer) {
+            if ($customer->hasStripeId()) {
+                $customer->syncStripeCustomerDetails();
+            }
+        }));
+    }
 }
