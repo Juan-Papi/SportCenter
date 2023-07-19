@@ -1,9 +1,23 @@
 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-gray-50">
     <h1 class="text-3xl text-center font-semibold mb-8">Complete esta informacion para crear un producto</h1>
+
     <div class="mb-4" wire:ignore>
         <form method="POST" action="{{ route('products.files', $product) }}" class="dropzone" id="my-awesome-dropzone">
         </form>
     </div>
+    @if ($product->images)
+        <section class="bg-gray-800 shadow-xl rounded-lg p-6 mb-4">
+            <h1 class="text-2xl text-center font-semibold mb-2">Imagenes del producto</h1>
+            <ul>
+                @foreach ($product->images as $image)
+                    <li>
+                        <img src="{{ Storage::url($image->url) }}" alt="">
+                    </li>
+                @endforeach
+            </ul>
+        </section>
+    @endif
+
 
     <div class="bg-gray-800 shadow-xl rounded-lg p-6">
         <div class="grid grid-cols-2">
