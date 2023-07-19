@@ -491,21 +491,21 @@ return [
 
         [
             'text'    => 'Gestionar Reservas',
-            'icon'    => 'fas fa-fw fa-warehouse',
+            'icon'    => 'fas fa-fw fa-bookmark',
             // 'can' => 'Gestionar Reservas',
             'submenu' => [
                 [
                     'text' => 'Reservas',
-                    'route'  => 'admin.parabrisa.index',
-                    'icon'    => 'fas fa-fw fa-glass-whiskey',
-                    'active' => ['parabrisa*'], //extra para los botones sidevar relacionados
+                    'route'  => 'booking.index',
+                    'icon'    => 'fas fa-fw fa-tasks',
+                    'active' => ['booking*'], //extra para los botones sidevar relacionados
                     //'can' => 'Listar reservas',
                 ],
 
                 [
                     'text' => 'Áreas',
                     'route'  => 'area.index',
-                    'icon'    => 'fas fa-fw fa-glass-whiskey',
+                    'icon'    => 'fas fa-fw fa-golf-ball',
                     'active' => ['area*'], //extra para los botones sidevar relacionados
                     // 'can' => 'Listar areas',
                 ],

@@ -24,6 +24,7 @@ use App\Http\Controllers\BillingController;
 use Illuminate\Http\Request; //para invoice
 use App\Http\Controllers\ReservaController;
 use App\Http\Controllers\AreaController;
+use App\Http\Controllers\BookingController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -212,7 +213,7 @@ Route::get('/user/invoice/{invoice}', function (Request $request, string $invoic
     return $request->user()->downloadInvoice($invoiceId);
 });
 
-//Reservar areas
+//Para las reservas del cliente
 Route::get('/reservar', [ReservaController::class, 'index'])->middleware('auth')->name('reservar.index');
 Route::get('/reserva/cliente', [ReservaController::class, 'mostrarc'])->middleware('auth')->name('reserva.mostrarc');
 
@@ -224,3 +225,12 @@ Route::get('area/{area}', [AreaController::class, 'show'])->name('area.show');
 Route::get('area/{area}/edit', [AreaController::class, 'edit'])->name('area.edit');
 Route::put('area/{area}', [AreaController::class, 'update'])->name('area.update');
 Route::delete('area/{area}', [AreaController::class, 'destroy'])->name('area.destroy');
+
+//Para el gestionar reservas del admin
+Route::get('booking', [BookingController::class, 'index'])->name('booking.index');
+Route::get('booking/create', [BookingController::class, 'create'])->name('booking.create');
+Route::post('booking', [BookingController::class, 'store'])->name('booking.store');
+Route::get('booking/{reserva}', [BookingController::class, 'show'])->name('booking.show');
+Route::get('booking/{reserva}/edit', [BookingController::class, 'edit'])->name('booking.edit');
+Route::put('booking/{reserva}', [BookingController::class, 'update'])->name('booking.update');
+Route::delete('booking/{reserva}', [BookingController::class, 'destroy'])->name('booking.destroy');
