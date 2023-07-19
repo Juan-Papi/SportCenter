@@ -40,6 +40,7 @@ class ClienteController extends Controller
             'paterno' => 'required',
             'ciudad' => 'required',
             'sexo' => 'required',
+            'telefono' => 'required',
         ]);
 
         Cliente::create([
@@ -49,6 +50,7 @@ class ClienteController extends Controller
             'paterno' => $request->paterno,
             'ciudad' => $request->ciudad,
             'sexo' => $request->sexo,
+            'telefono' => $request->telefono,
         ]);
 
         $bitacora = new Bitacora();
@@ -90,6 +92,7 @@ class ClienteController extends Controller
             'paterno' => 'required',
             'ciudad' => 'required',
             'sexo' => 'required',
+            'telefono' => 'required',
         ]);
 
         $cliente->update([
@@ -99,6 +102,7 @@ class ClienteController extends Controller
             'paterno' => $request->paterno,
             'ciudad' => $request->ciudad,
             'sexo' => $request->sexo,
+            'telefono' => $request->telefono,
         ]);
 
         $bitacora = new Bitacora();
