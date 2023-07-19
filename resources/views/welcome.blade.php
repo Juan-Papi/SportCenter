@@ -19,7 +19,7 @@
 
     <section class="mt-24">
         <h1 class="text-gray-500 text-center text-3xl mb-6">
-            Nuestros equipos
+            Áreas deportivas
         </h1>
 
         <div
@@ -146,7 +146,7 @@
 
     <section class="mt-24">
         <h1 class="text-gray-500 text-center text-3xl mb-6">
-            Áreas deportivas
+            Nuestros equipos
         </h1>
 
         <div
@@ -271,13 +271,13 @@
 
     </section>
 
-
     {{-- nueva section --}}
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-200 py-10">
         {{-- <div class="grid grid-cols-3 gap-6">
             hola mundo
         </div> --}}
         @livewire('subscription')
+
         <article class="mb-12">
             <p class="mb-3 text-gray-500 dark:text-gray-400">Track work across the enterprise through an open,
                 collaborative platform. Link issues across Jira and ingest data from other software development tools,
@@ -298,6 +298,7 @@
                 complexity of traditional ITSM solutions.Accelerate critical development work, eliminate toil, and
                 deploy changes with ease, with a complete audit trail for every change.</p>
         </article>
+
         <footer class="bg-white dark:bg-gray-900">
             <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                 <div class="md:flex md:justify-between">
@@ -403,7 +404,6 @@
             </div>
         </footer>
     </section>
-
 
 
 </x-app-layout>

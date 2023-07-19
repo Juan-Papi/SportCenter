@@ -25,6 +25,9 @@ use Illuminate\Http\Request; //para invoice
 use App\Http\Controllers\ReservaController;
 use App\Http\Controllers\AreaController;
 use App\Http\Controllers\BookingController;
+use App\Http\Livewire\CreateProduct;
+use App\Http\Livewire\EditProduct;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -234,3 +237,11 @@ Route::get('booking/{reserva}', [BookingController::class, 'show'])->name('booki
 Route::get('booking/{reserva}/edit', [BookingController::class, 'edit'])->name('booking.edit');
 Route::put('booking/{reserva}', [BookingController::class, 'update'])->name('booking.update');
 Route::delete('booking/{reserva}', [BookingController::class, 'destroy'])->name('booking.destroy');
+
+//Para los productos
+
+Route::get('products/create', CreateProduct::class)->name('products.create');
+
+Route::get('products/{product}/edit', EditProduct::class)->name('products.edit');
+
+Route::post('products/{product}/files', [ProductController::class, 'files'])->name('products.files');

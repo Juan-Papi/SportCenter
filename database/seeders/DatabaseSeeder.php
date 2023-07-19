@@ -34,5 +34,6 @@ class DatabaseSeeder extends Seeder
         $this->call(ClienteSeeder::class);
         // No necesita llamar a TelefonoSeeder, porque los teléfonos son creados en ClienteSeeder.
         $this->call(AreaSeeder::class);
+        $this->call(CategorySeeder::class);
     }
 }
