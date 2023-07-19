@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\ClientController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,4 +22,5 @@ Route::post("/signup", [AuthController::class, "signup"]);
 //TODO: RUTAS PROTEGIDAS POR SANCTUM
 Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::post("/logout", [AuthController::class, "logout"]);
+    Route::get("/listarAreas",[ClientController::class,"listarAreas"]);
 });
