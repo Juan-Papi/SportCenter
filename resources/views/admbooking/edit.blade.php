@@ -114,7 +114,7 @@
                 </div>
             </div>
             <div class="col-12">
-                {!! Form::submit('Crear Reserva', ['class' => 'btn btn-primary mt-2']) !!}
+                {!! Form::submit('Actualizar Reserva', ['class' => 'btn btn-primary mt-2']) !!}
             </div>
             {!! Form::close() !!}
         </div>
