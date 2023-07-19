@@ -11,4 +11,8 @@ class ReservaController extends Controller
     {
         return view('reservar.index');
     }
+
+    public function mostrarc(){
+        return view('reservar.bookings');
+    }
 }

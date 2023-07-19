@@ -175,6 +175,7 @@
                     <!-- Utilizamos un select para el campo "Sexo" -->
                     <select class="w-full px-4 py-2 mt-2 bg-gray-800 border rounded-md border-gray-700 text-gray-100"
                         wire:model="sexo">
+                        <option value="">Seleccionar sexo</option>
                         <option value="masculino">Masculino</option>
                         <option value="femenino">Femenino</option>
                     </select>
@@ -206,7 +207,7 @@
     </section>
 
     @push('js')
-        <script>
+        {{-- <script>
             //pedimos que escuche el evento crear
             Livewire.on('crear', function(message) {
                 Swal.fire({
@@ -216,6 +217,12 @@
                     showConfirmButton: false,
                     timer: 1500
                 })
+            })
+        </script> --}}
+         <script>
+            //pedimos que escuche el evento crear
+            Livewire.on('crear', function(message) {
+                Swal.fire(message)
             })
         </script>
     @endpush

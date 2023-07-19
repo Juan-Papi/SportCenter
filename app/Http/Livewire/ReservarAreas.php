@@ -3,7 +3,9 @@
 namespace App\Http\Livewire;
 
 use App\Models\Area;
+use App\Models\Bitacora;
 use App\Models\Cliente;
+use App\Models\Reserva;
 use Livewire\Component;
 
 class ReservarAreas extends Component
@@ -50,14 +52,24 @@ class ReservarAreas extends Component
             'telefono' => $this->telefono,
         ]);
 
-        $area->reservas()->create([
+        Reserva::create([
             'fecha' => now(),
             'fecha_reserva' => $this->fecha_reserva,
             'hora_inicio' => $this->hora_inicio,
             'hora_fin' => $this->hora_fin,
             'estado' => 'SOLICITADO',
             'cliente_id' => $cliente->id,
+            'user_id' => auth()->id(),
+            'area_id' => $this->selectedAreaId,
         ]);
+
+        $bitacora = new Bitacora();
+        $bitacora->accion = '+++SOLICITUD RESERVA';
+        $bitacora->fecha_hora = now();
+        $bitacora->fecha = now()->format('Y-m-d');
+        $bitacora->user_id = auth()->id();
+        $bitacora->save();
+
         $this->emit('crear', '¡Solicitud de reserva exitosa!');
         // Limpiamos los campos después de reservar
         $this->selectedAreaId = null;
