@@ -21,8 +21,10 @@ use App\Http\Controllers\PersonalController;
 use App\Http\Controllers\BitacoraController;
 use App\Http\Livewire\ShowMembresias;
 use App\Http\Controllers\BillingController;
-use Illuminate\Http\Request;//para invoice
+use Illuminate\Http\Request; //para invoice
 use App\Http\Controllers\ReservaController;
+use App\Http\Controllers\AreaController;
+use App\Http\Controllers\BookingController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -49,7 +51,7 @@ Route::middleware([
 });
 
 //Para los roles
-Route::resource('roles',RoleController::class)->names('admin.roles');
+Route::resource('roles', RoleController::class)->names('admin.roles');
 
 //Para los usuarios
 //only en este caso solo creara las rutas index, edit, update
@@ -65,7 +67,7 @@ Route::put('users/{user}', [UserController::class, 'update'])->name('admin.users
 Route::delete('users/{user}', [UserController::class, 'destroy'])->name('admin.users.destroy');
 
 //Para los estados del pedido
-Route::resource('estado-pedido',EstadoPedidoController::class)->names('admin.estado-pedido');
+Route::resource('estado-pedido', EstadoPedidoController::class)->names('admin.estado-pedido');
 
 //Para las categorias -------------------------------------------------------------------------------------------------
 Route::get('categoria', [CategoriaController::class, 'index'])->name('admin.categoria.index');
@@ -186,7 +188,7 @@ Route::get('nota_venta/{nota_venta}/edit', [NotaVentaController::class, 'edit'])
 Route::put('nota_venta/{nota_venta}', [NotaVentaController::class, 'update'])->name('nota_venta.update');
 Route::delete('nota_venta/{nota_venta}', [NotaVentaController::class, 'destroy'])->name('nota_venta.destroy');
 //Route::get('nota_venta/reporte', [NotaVentaController::class, 'generarReporte'])->name('nota_venta.reporte');//Forma1 no funciona por alguna razon,mirar notaCompraComponent de software sport center para ver como se hizo get correctamente
-Route::post('nota_venta/reporte', [NotaVentaController::class, 'generarReporte'])->name('nota_venta.reporte');//para la forma 2 con POST (si funciona comprobado!!)
+Route::post('nota_venta/reporte', [NotaVentaController::class, 'generarReporte'])->name('nota_venta.reporte'); //para la forma 2 con POST (si funciona comprobado!!)
 
 //PARA LOS EMPLEADOS
 Route::get('personal', [PersonalController::class, 'index'])->name('personal.index');
@@ -211,5 +213,24 @@ Route::get('/user/invoice/{invoice}', function (Request $request, string $invoic
     return $request->user()->downloadInvoice($invoiceId);
 });
 
-//Reservar areas
+//Para las reservas del cliente
 Route::get('/reservar', [ReservaController::class, 'index'])->middleware('auth')->name('reservar.index');
+Route::get('/reserva/cliente', [ReservaController::class, 'mostrarc'])->middleware('auth')->name('reserva.mostrarc');
+
+//PARA LAS AREAS
+Route::get('area', [AreaController::class, 'index'])->name('area.index');
+Route::get('area/create', [AreaController::class, 'create'])->name('area.create');
+Route::post('area', [AreaController::class, 'store'])->name('area.store');
+Route::get('area/{area}', [AreaController::class, 'show'])->name('area.show');
+Route::get('area/{area}/edit', [AreaController::class, 'edit'])->name('area.edit');
+Route::put('area/{area}', [AreaController::class, 'update'])->name('area.update');
+Route::delete('area/{area}', [AreaController::class, 'destroy'])->name('area.destroy');
+
+//Para el gestionar reservas del admin
+Route::get('booking', [BookingController::class, 'index'])->name('booking.index');
+Route::get('booking/create', [BookingController::class, 'create'])->name('booking.create');
+Route::post('booking', [BookingController::class, 'store'])->name('booking.store');
+Route::get('booking/{reserva}', [BookingController::class, 'show'])->name('booking.show');
+Route::get('booking/{reserva}/edit', [BookingController::class, 'edit'])->name('booking.edit');
+Route::put('booking/{reserva}', [BookingController::class, 'update'])->name('booking.update');
+Route::delete('booking/{reserva}', [BookingController::class, 'destroy'])->name('booking.destroy');

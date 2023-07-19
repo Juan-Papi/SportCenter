@@ -17,7 +17,7 @@
                     <thead>
                         <tr>
 
-                            <th>C.I</th>
+                            {{-- <th>C.I</th> --}}
                             <th>Nombre</th>
                             <th>Paterno</th>
                             <th>Materno</th>
@@ -29,9 +29,9 @@
                     <tbody>
                         @foreach ($clientes as $cliente)
                             <tr>
-                                <td>
+                                {{-- <td>
                                     {{ $cliente->carnet }}
-                                </td>
+                                </td> --}}
                                 <td>
                                     {{ $cliente->nombre }}
                                 </td>

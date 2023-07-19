@@ -324,7 +324,7 @@ return [
             'label'       => 4,
             'label_color' => 'success',
         ],*/
-       /* ['header' => 'account_settings'],
+        /* ['header' => 'account_settings'],
         [
             'text' => 'profile',
             'route'  => 'profile.show',
@@ -488,6 +488,31 @@ return [
 
             ],
         ],
+
+        [
+            'text'    => 'Gestionar Reservas',
+            'icon'    => 'fas fa-fw fa-bookmark',
+            // 'can' => 'Gestionar Reservas',
+            'submenu' => [
+                [
+                    'text' => 'Reservas',
+                    'route'  => 'booking.index',
+                    'icon'    => 'fas fa-fw fa-tasks',
+                    'active' => ['booking*'], //extra para los botones sidevar relacionados
+                    //'can' => 'Listar reservas',
+                ],
+
+                [
+                    'text' => 'Áreas',
+                    'route'  => 'area.index',
+                    'icon'    => 'fas fa-fw fa-golf-ball',
+                    'active' => ['area*'], //extra para los botones sidevar relacionados
+                    // 'can' => 'Listar areas',
+                ],
+
+            ],
+        ],
+
 
         [
             'text'    => 'multilevel',

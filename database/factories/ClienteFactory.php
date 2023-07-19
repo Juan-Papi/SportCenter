@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class ClienteFactory extends Factory
 {
-    
+
     /**
      * Define the model's default state.
      *
@@ -23,6 +23,7 @@ class ClienteFactory extends Factory
             'materno' => $this->faker->lastName,
             'paterno' => $this->faker->lastName,
             'ciudad' => $this->faker->city,
+            'telefono' => $this->faker->phoneNumber,
             'sexo' => $this->faker->randomElement(['masculino', 'femenino']),
         ];
     }
