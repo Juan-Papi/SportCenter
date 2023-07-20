@@ -5,7 +5,7 @@
             <table class="w-full">
                 <thead>
                     <tr class="text-gray-50">
-                        <th class="lg:w-1/5 md:w-1/4 sm:w-1/2 px-4 py-2 text-left">Fecha creacion</th>
+                        <th class="lg:w-1/5 md:w-1/4 sm:w-1/2 px-4 py-2 text-left">Área</th>
                         <th class="lg:w-1/5 md:w-1/4 sm:w-1/2 px-4 py-2 text-left">Fecha Reserva</th>
                         <th class="lg:w-1/5 md:w-1/4 sm:w-1/2 px-4 py-2 text-left">Hora Inicio</th>
                         <th class="lg:w-1/5 md:w-1/4 sm:w-1/2 px-4 py-2 text-left">Hora Fin</th>
@@ -15,7 +15,7 @@
                 <tbody>
                     @foreach ($reservas as $reserva)
                         <tr class="text-gray-50">
-                            <td class="lg:w-1/5 md:w-1/4 sm:w-1/2 px-4 py-2">{{ $reserva->fecha }}</td>
+                            <td class="lg:w-1/5 md:w-1/4 sm:w-1/2 px-4 py-2">{{ $reserva->area->nombre }}</td>
                             <td class="lg:w-1/5 md:w-1/4 sm:w-1/2 px-4 py-2">{{ $reserva->fecha_reserva }}</td>
                             <td class="lg:w-1/5 md:w-1/4 sm:w-1/2 px-4 py-2">{{ $reserva->hora_inicio }}</td>
                             <td class="lg:w-1/5 md:w-1/4 sm:w-1/2 px-4 py-2">{{ $reserva->hora_fin }}</td>
