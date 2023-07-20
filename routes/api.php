@@ -23,4 +23,7 @@ Route::post("/signup", [AuthController::class, "signup"]);
 Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::post("/logout", [AuthController::class, "logout"]);
     Route::get("/listarAreas",[ClientController::class,"listarAreas"]);
+    Route::post("/reservarAreas", [ClientController::class, "reservarAreas"]);
+    Route::get("/areasReservadas", [ClientController::class, "listarAreasReservadas"]);
+
 });
