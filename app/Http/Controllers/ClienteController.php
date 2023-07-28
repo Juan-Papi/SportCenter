@@ -86,7 +86,7 @@ class ClienteController extends Controller
     public function update(Request $request, Cliente $cliente)
     {
         $request->validate([
-            'carnet' => 'required|integer|unique:clientes,carnet,' . $cliente->id,
+            //'carnet' => 'required|integer|unique:clientes,carnet,' . $cliente->id,
             'nombre' => 'required',
             'materno' => 'required',
             'paterno' => 'required',

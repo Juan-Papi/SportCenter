@@ -37,7 +37,7 @@ class ReservarAreas extends Component
             'paterno' => 'required|string',
             'materno' => 'required|string',
             'ciudad' => 'required|string',
-            'sexo' => 'required|string|in:masculino,femenino',
+            'sexo' => 'required|string|in:Masculino,Memenino',
             'telefono' => 'required|string',
         ]);
 

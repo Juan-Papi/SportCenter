@@ -7,6 +7,7 @@
 @stop
 
 @section('content')
+
     <div class="card">
         <div class="card-body">
             {!! Form::model($cliente, ['route' => ['cliente.update', $cliente], 'method' => 'put']) !!}
@@ -51,23 +52,24 @@
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
+
+
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        {!! Form::label('carnet', 'Carnet: ') !!}
-                        {!! Form::number('carnet', null, [
-                            'class' => 'form-control' . ($errors->has('carnet') ? ' is-invalid' : ''),
-                            'placeholder' => 'Ingrese el número de carnet...',
+                        {!! Form::label('telefono', 'Telefono: ') !!}
+                        {!! Form::text('telefono', null, [
+                            'class' => 'form-control' . ($errors->has('telefono') ? ' is-invalid' : ''),
+                            'placeholder' => 'Ingrese el telefono...',
                         ]) !!}
 
-                        @error('carnet')
+                        @error('telefono')
                             <span class="invalid-feedback">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
                     </div>
-
                     <div class="form-group">
                         {!! Form::label('ciudad', 'Ciudad: ') !!}
                         {!! Form::text('ciudad', null, [
@@ -84,7 +86,7 @@
 
                     <div class="form-group">
                         {!! Form::label('sexo', 'Sexo: ') !!}
-                        {!! Form::select('sexo', ['M' => 'Masculino', 'F' => 'Femenino'], null, [
+                        {!! Form::select('sexo', ['Masculino' => 'Masculino', 'Femenino' => 'Femenino'], null, [
                             'class' => 'form-control' . ($errors->has('sexo') ? ' is-invalid' : ''),
                             'placeholder' => 'Seleccione el sexo...',
                         ]) !!}
@@ -95,28 +97,14 @@
                             </span>
                         @enderror
                     </div>
-                    <div class="form-group">
-                        {!! Form::label('telefono', 'Telefono: ') !!}
-                        {!! Form::text('telefono', null, [
-                            'class' => 'form-control' . ($errors->has('telefono') ? ' is-invalid' : ''),
-                            'placeholder' => 'Ingrese el telefono...',
-                        ]) !!}
-
-                        @error('telefono')
-                            <span class="invalid-feedback">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
                 </div>
             </div>
 
-            {!! Form::submit('Actualizar cliente', ['class' => 'btn btn-primary mt-2']) !!}
+            {!! Form::submit('Actualizar Cliente', ['class' => 'btn btn-primary mt-2']) !!}
 
             {!! Form::close() !!}
         </div>
     </div>
-
 
 @stop
 

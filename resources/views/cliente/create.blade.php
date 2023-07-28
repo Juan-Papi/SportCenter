@@ -51,6 +51,20 @@
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
+
+                        <div class="form-group">
+                            {!! Form::label('telefono', 'Telefono: ') !!}
+                            {!! Form::text('telefono', null, [
+                                'class' => 'form-control' . ($errors->has('telefono') ? ' is-invalid' : ''),
+                                'placeholder' => 'Ingrese el telefono...',
+                            ]) !!}
+
+                            @error('telefono')
+                                <span class="invalid-feedback">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -95,21 +109,6 @@
                             </span>
                         @enderror
                     </div>
-
-                    <div class="form-group">
-                        {!! Form::label('telefono', 'Telefono: ') !!}
-                        {!! Form::text('telefono', null, [
-                            'class' => 'form-control' . ($errors->has('telefono') ? ' is-invalid' : ''),
-                            'placeholder' => 'Ingrese el telefono...',
-                        ]) !!}
-
-                        @error('telefono')
-                            <span class="invalid-feedback">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
-
                 </div>
             </div>
 
@@ -118,7 +117,6 @@
             {!! Form::close() !!}
         </div>
     </div>
-
 
 @stop
 

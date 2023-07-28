@@ -176,8 +176,8 @@
                     <select class="w-full px-4 py-2 mt-2 bg-gray-800 border rounded-md border-gray-700 text-gray-100"
                         wire:model="sexo">
                         <option value="">Seleccionar sexo</option>
-                        <option value="masculino">Masculino</option>
-                        <option value="femenino">Femenino</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
                     </select>
                     @error('sexo')
                         <span class="text-red-500">{{ $message }}</span>

@@ -6,7 +6,7 @@
 
             <div class="w-full md:w-3/4 lg:w-1/2">
                 <h1 class="text-black font-bold text-4xl">
-                    FITNESS SPORT CENTER
+                    FITNET SPORT CENTER
                 </h1>
                 <p class="text-white text-lg mt-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
                     numquam placeat et perspiciatis ipsum,
@@ -26,8 +26,8 @@
             class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8">
             <article>
                 <figure>
-                    <img class="rounded-xl h-36 w-full object-cover"
-                        src="{{ asset('img/home/content/car-gaa7ebd4e1_640.jpg') }}" alt="">
+                    <img class="rounded-xl h-36 w-full object-cover" src="{{ asset('images/areas/c1.jpg') }}"
+                        alt="">
                 </figure>
                 <header class="mt-2">
 
@@ -40,8 +40,8 @@
             </article>
             <article>
                 <figure>
-                    <img class="rounded-xl h-36 w-full object-cover"
-                        src="{{ asset('img/home/content/audi-a3-gb143c57e8_640.jpg') }}" alt="">
+                    <img class="rounded-xl h-36 w-full object-cover" src="{{ asset('images/areas/c2.jpg') }}"
+                        alt="">
                 </figure>
                 <header class="mt-2">
 
@@ -54,8 +54,8 @@
             </article>
             <article>
                 <figure>
-                    <img class="rounded-xl h-36 w-full object-cover"
-                        src="{{ asset('img/home/content/automobile-gf9c29d6a1_640.jpg') }}" alt="">
+                    <img class="rounded-xl h-36 w-full object-cover" src="{{ asset('images/areas/c3.jpg') }}"
+                        alt="">
                 </figure>
                 <header class="mt-2">
 
@@ -68,8 +68,8 @@
             </article>
             <article>
                 <figure>
-                    <img class="rounded-xl h-36 w-full object-cover"
-                        src="{{ asset('img/home/content/chevy-impala-ga2c01d4f5_640.jpg') }}" alt="">
+                    <img class="rounded-xl h-36 w-full object-cover" src="{{ asset('images/areas/c4.jpg') }}"
+                        alt="">
                 </figure>
                 <header class="mt-2">
 
@@ -86,8 +86,8 @@
             class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8">
             <article>
                 <figure>
-                    <img class="rounded-xl h-36 w-full object-cover"
-                        src="{{ asset('img/home/content/car-gaa7ebd4e1_640.jpg') }}" alt="">
+                    <img class="rounded-xl h-36 w-full object-cover" src="{{ asset('images/areas/c5.jpg') }}"
+                        alt="">
                 </figure>
                 <header class="mt-2">
 
@@ -100,8 +100,8 @@
             </article>
             <article>
                 <figure>
-                    <img class="rounded-xl h-36 w-full object-cover"
-                        src="{{ asset('img/home/content/audi-a3-gb143c57e8_640.jpg') }}" alt="">
+                    <img class="rounded-xl h-36 w-full object-cover" src="{{ asset('images/areas/c6.jpg') }}"
+                        alt="">
                 </figure>
                 <header class="mt-2">
 
@@ -114,8 +114,8 @@
             </article>
             <article>
                 <figure>
-                    <img class="rounded-xl h-36 w-full object-cover"
-                        src="{{ asset('img/home/content/automobile-gf9c29d6a1_640.jpg') }}" alt="">
+                    <img class="rounded-xl h-36 w-full object-cover" src="{{ asset('images/areas/c7.jpg') }}"
+                        alt="">
                 </figure>
                 <header class="mt-2">
 
@@ -128,8 +128,8 @@
             </article>
             <article>
                 <figure>
-                    <img class="rounded-xl h-36 w-full object-cover"
-                        src="{{ asset('img/home/content/chevy-impala-ga2c01d4f5_640.jpg') }}" alt="">
+                    <img class="rounded-xl h-36 w-full object-cover" src="{{ asset('images/areas/c8.jpg') }}"
+                        alt="">
                 </figure>
                 <header class="mt-2">
 
@@ -154,7 +154,7 @@
             <article>
                 <figure>
                     <img class="rounded-xl h-36 w-full object-cover"
-                        src="{{ asset('img/home/content/car-gaa7ebd4e1_640.jpg') }}" alt="">
+                        src="{{ asset('images/equipos/area1.jpg') }}" alt="">
                 </figure>
                 <header class="mt-2">
 
@@ -168,7 +168,7 @@
             <article>
                 <figure>
                     <img class="rounded-xl h-36 w-full object-cover"
-                        src="{{ asset('img/home/content/audi-a3-gb143c57e8_640.jpg') }}" alt="">
+                        src="{{ asset('images/equipos/3pesas.jpg') }}" alt="">
                 </figure>
                 <header class="mt-2">
 
@@ -182,7 +182,7 @@
             <article>
                 <figure>
                     <img class="rounded-xl h-36 w-full object-cover"
-                        src="{{ asset('img/home/content/automobile-gf9c29d6a1_640.jpg') }}" alt="">
+                        src="{{ asset('images/equipos/4pesas.jpg') }}" alt="">
                 </figure>
                 <header class="mt-2">
 
@@ -196,7 +196,7 @@
             <article>
                 <figure>
                     <img class="rounded-xl h-36 w-full object-cover"
-                        src="{{ asset('img/home/content/chevy-impala-ga2c01d4f5_640.jpg') }}" alt="">
+                        src="{{ asset('images/equipos/5pesas.jpg') }}" alt="">
                 </figure>
                 <header class="mt-2">
 
@@ -214,7 +214,7 @@
             <article>
                 <figure>
                     <img class="rounded-xl h-36 w-full object-cover"
-                        src="{{ asset('img/home/content/car-gaa7ebd4e1_640.jpg') }}" alt="">
+                        src="{{ asset('images/equipos/6pesas.jpg') }}" alt="">
                 </figure>
                 <header class="mt-2">
 
@@ -228,7 +228,7 @@
             <article>
                 <figure>
                     <img class="rounded-xl h-36 w-full object-cover"
-                        src="{{ asset('img/home/content/audi-a3-gb143c57e8_640.jpg') }}" alt="">
+                        src="{{ asset('images/equipos/7pesas.jpg') }}" alt="">
                 </figure>
                 <header class="mt-2">
 
@@ -242,7 +242,7 @@
             <article>
                 <figure>
                     <img class="rounded-xl h-36 w-full object-cover"
-                        src="{{ asset('img/home/content/automobile-gf9c29d6a1_640.jpg') }}" alt="">
+                        src="{{ asset('images/equipos/8pesas.jpg') }}" alt="">
                 </figure>
                 <header class="mt-2">
 
@@ -256,7 +256,7 @@
             <article>
                 <figure>
                     <img class="rounded-xl h-36 w-full object-cover"
-                        src="{{ asset('img/home/content/chevy-impala-ga2c01d4f5_640.jpg') }}" alt="">
+                        src="{{ asset('images/equipos/9pesas.jpg') }}" alt="">
                 </figure>
                 <header class="mt-2">
 
